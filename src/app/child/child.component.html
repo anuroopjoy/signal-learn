@@ -1,0 +1,13 @@
+<main>
+  {{ count() }}
+  Factorial is {{ factorial() }}
+</main>
+
+<footer class="footer">
+  <button (click)="log()">Start logging</button>
+  <button (click)="stopLog()">Stop logging</button>
+  <button (click)="setValue()">Set Value</button>
+  <button (click)="updateValue()">Update Value</button>
+  <button (click)="updateList()">Update List</button>
+  <button (click)="mutateList()">Mutate List</button>
+</footer>
