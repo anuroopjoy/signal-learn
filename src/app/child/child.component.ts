@@ -9,7 +9,7 @@ import {
   signal,
   untracked,
 } from '@angular/core';
-import { cloneDeep, isEqual } from 'lodash-es';
+import { isEqual } from 'lodash-es';
 
 interface Task {
   name: string;
@@ -63,7 +63,7 @@ export class ChildComponent {
   updateList() {
     this.tasks.update((list) => {
       list[0].status = true;
-      return list;
+      return [...list];
     });
     // this.tasks.set([{ name: 'code', status: true }]);
   }
